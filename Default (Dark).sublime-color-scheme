@@ -1,0 +1,334 @@
+{
+    "name": "Xcode Default Dark",
+    "author": "@mightbesimon, inspired by Apple",
+    "variables":
+    {
+        "Plain_Text"                    : "#FFFFFF",    // xcode.syntax.plain
+        "Comments"                      : "#6C7986",    // xcode.syntax.comment
+        "Documentation_Markup"          : "#6C7986",    // xcode.syntax.comment.doc
+        "Documentation_Markup_Keywords" : "#92A1B1",    // xcode.syntax.comment.doc.keyword
+        "Marks"                         : "#92A1B1",    // xcode.syntax.mark
+
+        "Strings"                 : "#FC6A5D",          // xcode.syntax.string
+        "Characters"              : "#D0BF69",          // xcode.syntax.character
+        "Numbers"                 : "#D0BF69",          // xcode.syntax.number
+        "Keywords"                : "#FC5FA3",          // xcode.syntax.keyword
+        "Preprocessor_Statements" : "#FD8F3F",          // xcode.syntax.preprocessor
+        "URLs"                    : "#5482FF",          // xcode.syntax.url
+        "Attributes"              : "#BF8555",          // xcode.syntax.attribute
+        "Type_Declarations"       : "#5DD8FF",          // xcode.syntax.declaration.type
+        "Other_Declarations"      : "#41A1C0",          // xcode.syntax.declaration.other
+
+        "Project_Class_Names"                    : "#9EF1DD",   // xcode.syntax.identifier.class
+        "Project_Function_and_Method_Names"      : "#67B7A4",   // xcode.syntax.identifier.function
+        "Project_Constants"                      : "#67B7A4",   // xcode.syntax.identifier.constant
+        "Project_Type_Names"                     : "#9EF1DD",   // xcode.syntax.identifier.type
+        "Project_Instance_Variables_and_Globals" : "#67B7A4",   // xcode.syntax.identifier.variable
+        "Project_Preprocessor_Macros"            : "#FD8F3F",   // xcode.syntax.identifier.macro
+
+        "Other_Class_Names"                    : "#D0A8FF",     // xcode.syntax.identifier.class.system
+        "Other_Function_and_Method_Names"      : "#A167E6",     // xcode.syntax.identifier.function.system
+        "Other_Constants"                      : "#A167E6",     // xcode.syntax.identifier.constant.system
+        "Other_Type_Names"                     : "#D0A8FF",     // xcode.syntax.identifier.type.system
+        "Other_Instance_Variables_and_Globals" : "#A167E6",     // xcode.syntax.identifier.variable.system
+        "Other_Preprocessor_Macros"            : "#FD8F3F",     // xcode.syntax.identifier.macro.system
+
+        "Heading" : "#AA0D91",      // xcode.syntax.markup.code
+
+        "Background"   : "#1F1F24",
+        "Current_Line" : "#23252B",
+        "Selection"    : "#515B70",
+        "Cursor"       : "#FFFFFF",
+        "Invisibles"   : "#424D5B",
+
+        "embedded" : "color(var(Background) blend(var(Invisibles) 86%))",
+        "invalid"  : "var(Strings)",
+    },
+    "globals":
+    {
+        "foreground"         : "var(Plain_Text)",
+        "background"         : "var(Background)",
+        "caret"              : "var(Cursor)",
+        "line_highlight"     : "var(Current_Line)",
+        "selection"          : "var(Selection)",
+        "selection_border"   : "color(var(Selection)  blend(#FFF 92%)",
+        "inactive_selection" : "color(var(Selection)  blend(var(Background) 72%)",
+        "misspelling"        : "var(Strings)",
+        "shadow"             : "color(var(Background) blend(#000 50%))"
+    },
+    "rules":
+    [
+        {
+            "name"       : "Error",
+            "scope"      : "markup.error",
+            "foreground" : "var(Strings)"
+        },
+        {
+            "name": "Warning",
+            "scope": "markup.warning",
+            "foreground": "var(Preprocessor_Statements)"
+        },
+        {
+            "name": "Parameters",
+            "scope": "variable.parameter",
+            "foreground": "var(Attributes)"
+        },
+        {
+            "name": "Comments",
+            "scope": "comment, punctuation.definition.comment",
+            "foreground": "var(Comments)"
+        },
+        {
+            "name": "Punctuation",
+            "scope": "punctuation.definition",
+            "foreground": "var(Plain_text)"
+        },
+        {
+            "name": "Operators",
+            "scope": "keyword.operator",
+            "foreground": "var(Plain_text)"
+        },
+        {
+            "name": "Keywords",
+            "scope": "keyword, keyword.operator.word",
+            "foreground": "var(Keywords)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Keywords",
+            "scope": "keyword.control.import",
+            "foreground": "var(Preprocessor_Statements)"
+        },
+        {
+            "name": "Variables",
+            "scope": "variable",
+            "foreground": "var(Plain_text)"
+        },
+        {
+            "name": "Variable function",
+            "scope": "variable.function",
+            "foreground": "var(Project_Method_Names)"
+        },
+        {
+            "name": "Functions",
+            "scope": "entity.name.function",
+            "foreground": "var(Project_Method_Names)"
+        },
+        {
+            "name": "Classes",
+            "scope": "entity.name - (entity.name.section | entity.name.tag | entity.name.label)",
+            "foreground": "var(Project_Class_Names)"
+        },
+        {
+            "name": "Storage",
+            "scope": "storage",
+            "foreground": "var(Keywords)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Support Functions",
+            "scope": "support.function",
+            "foreground": "var(Other_Method_Names)"
+        },
+        {
+            "name": "Method Call",
+            "scope": "meta.method-call variable.function",
+            "foreground": "var(Other_Method_Names)"
+        },
+        {
+            "name": "Method Call",
+            "scope": "meta.method-call variable.function.member",
+            "foreground": "var(Other_Preprocessor_Macros)"
+        },
+        {
+            "name": "Support Classes",
+            "scope": "support.class",
+            "foreground": "var(Other_Class_Names)"
+        },
+        {
+            "name": "Support Constants",
+            "scope": "support.constant, constant.language",
+            "foreground": "var(Keywords)",
+            "font_style": "italic"
+        },
+        {
+            "name": "CSS Support Constants",
+            "scope": "source.css support.constant",
+            "foreground": "var(Preprocessor_Statements)"
+        },
+        {
+            "name": "Strings, Inherited Class",
+            "scope": "string, entity.other.inherited-class",
+            "foreground": "var(Strings)"
+        },
+        {
+            "name": "Strings Punctuation",
+            "scope": "string punctuation.definition.string",
+            "foreground": "var(Strings)"
+        },
+        {
+            "name": "Variables in Strings",
+            "scope": "string variable",
+            "foreground": "var(Plain_text)"
+        },
+        {
+            "name": "Misc Punctuation",
+            "scope": "punctuation.separator, punctuation.terminator, punctuation.accessor",
+            "foreground": "var(Plain_text)"
+        },
+        {
+            "name": "Misc Punctuation",
+            "scope": "punctuation.section",
+            "foreground": "var(Plain_text)"
+        },
+        {
+            "name": "Integers",
+            "scope": "constant.numeric",
+            "foreground": "var(Numbers)"
+        },
+        {
+            "name": "Constants",
+            "scope": "constant",
+            "foreground": "var(Project_Constants)"
+        },
+        {
+            "name": "Tags",
+            "scope": "entity.name.tag",
+            "foreground": "var(Strings)"
+        },
+        {
+            "name": "Attributes",
+            "scope": "entity.other.attribute-name",
+            "foreground": "var(Attributes)"
+        },
+        {
+            "name": "Types",
+            "scope": "entity.name.type",
+            "foreground": "var(Project_Type_Names)"
+        },
+        {
+            "name": "Types",
+            "scope": "support.type",
+            "foreground": "var(Other_Type_Names)"
+        },
+        {
+            "name": "Headings",
+            "scope": "markup.heading",
+            "foreground": "var(Project_Constants)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Bold",
+            "scope": "markup.bold",
+            "font_style": "bold"
+        },
+        {
+            "name": "Italic",
+            "scope": "markup.italic",
+            "font_style": "italic"
+        },
+        {
+            "name": "Code",
+            "scope": "markup.raw",
+            "background": "var(embedded)"
+        },
+        {
+            "name": "Code",
+            "scope": "markup.raw.inline",
+            "foreground": "var(Preprocessor_Statements)",
+            "background": "var(embedded)"
+        },
+        {
+            "name": "Strings Punctuation",
+            "scope": "markup.raw.inline punctuation.definition.raw",
+            "foreground": "var(Characters)"
+        },
+        {
+            "name": "Link Text",
+            "scope": "string.other.link, markup.underline.link",
+            "foreground": "var(URLs)"
+        },
+        {
+            "name": "Lists",
+            "scope": "punctuation.definition.list_item, markup.list.numbered.bullet",
+            "foreground": "var(Documentation_Markup)"
+        },
+        {
+            "name": "Quotes",
+            "scope": "punctuation.definition.blockquote",
+            "background": "var(Invisibles)"
+        },
+        {
+            "name": "Link/Image Punctuation",
+            "scope": "punctuation.definition.image, punctuation.definition.link, punctuation.definition.metadata",
+            "foreground": "var(URLs)"
+        },
+        {
+            "name": "Inserted",
+            "scope": "markup.inserted",
+            "foreground": "var(Comments)"
+        },
+        {
+            "name": "Deleted",
+            "scope": "markup.deleted",
+            "foreground": "var(invalid)"
+        },
+        {
+            "name": "Changed",
+            "scope": "markup.changed",
+            "foreground": "var(Attributes)"
+        },
+        {
+            "name": "Colors",
+            "scope": "constant.other.color",
+            "foreground": "var(Characters)"
+        },
+        {
+            "name": "Regular Expressions",
+            "scope": "string.regexp",
+            "foreground": "var(Characters)"
+        },
+        {
+            "name": "Regular Expressions Operator",
+            "scope": "string.regexp keyword.operator",
+            "foreground": "var(Plain_text)"
+        },
+        {
+            "name": "Escape Characters",
+            "scope": "constant.character.escape",
+            "foreground": "var(Other_Preprocessor_Macros)"
+        },
+        {
+            "name": "YAML String",
+            "scope": "source.yaml string.unquoted",
+            "foreground": "var(Strings)"
+        },
+        {
+            "name": "Embedded",
+            "scope": "punctuation.section.embedded",
+            "foreground": "var(embedded)"
+        },
+        {
+            "name": "Embedded Variable",
+            "scope": "variable.interpolation",
+            "foreground": "var(Project_Preprocessor_Macros)"
+        },
+        {
+            "name": "Illegal",
+            "scope": "invalid.illegal",
+            "foreground": "#FFF",
+            "background": "var(invalid)"
+        },
+        {
+            "name": "Invalid deprecated",
+            "scope": "invalid.deprecated",
+            "foreground": "#FFF",
+            "background": "var(invalid)"
+        },
+        {
+            "name": "Markdown Line Break",
+            "scope": "punctuation.definition.hard-line-break",
+            "background": "var(Invisibles)"
+        }
+    ]
+}
